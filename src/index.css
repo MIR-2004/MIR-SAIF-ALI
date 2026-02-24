@@ -1,0 +1,73 @@
+/* @import url() FONT IMPORTS MUST ALWAYS BE AT THE VERY TOP OF THIS FILE, ABOVE THE TAILWIND IMPORTS — DO NOT DELETE THIS COMMENT */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap');
+
+/* CRITICAL: THE FOLLOWING TAILWIND IMPORTS MUST NEVER BE DELETED OR REORDERED — DO NOT DELETE THIS COMMENT */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* END TAILWIND IMPORTS — ALL OTHER CSS MUST GO BELOW THIS LINE */
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --color-bg: #0a0a0a;
+  --color-orange: #FF6B00;
+  --color-chrome: #C0C0C0;
+  --color-red: #CC0000;
+  --color-text: #F5F5F5;
+  --color-muted: #888888;
+}
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Rajdhani', sans-serif;
+  overflow-x: hidden;
+}
+/* Carbon Fiber Texture */
+.carbon-fiber {
+  background-color: #111;
+  background-image:
+    linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000),
+    linear-gradient(45deg, #000 25%, transparent 25%, transparent 75%, #000 75%, #000);
+  background-size: 10px 10px;
+  background-position: 0 0, 5px 5px;
+}
+/* Racing Stripe Utility */
+.racing-stripe {
+  background: repeating-linear-gradient(
+    45deg,
+    var(--color-orange),
+    var(--color-orange) 20px,
+    transparent 20px,
+    transparent 40px
+  );
+}
+/* Chrome Text Effect */
+.text-chrome {
+  background: linear-gradient(to bottom, #ffffff 0%, #e0e0e0 50%, #b0b0b0 51%, #f0f0f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 2px 4px rgba(0,0,0,0.5);
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+  border-left: 1px solid #333;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8533;
+}
+::selection {
+  background: var(--color-orange);
+  color: #000;
+}
